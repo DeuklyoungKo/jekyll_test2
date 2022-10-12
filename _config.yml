@@ -71,5 +71,10 @@ defaults:
       uiCode2: '공지 및 업데이트'
   - scope:
       path: ""
+      type: "noLayout"
     values:
-      layout: "default"    
+      layout: "noLayout"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

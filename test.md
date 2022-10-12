@@ -1,5 +1,5 @@
 ---
-layout:ttt
+layout: noLayout
 title: 세번째 공지사항
 ---
 # 큰 타이틀
@@ -11,9 +11,15 @@ title: 세번째 공지사항
 test code
 ```
 
-## (링크)[https://www.kt.com]
+## [링크](https://www.kt.com)
 
 
 [test][test]
 
 [test]: https://jekyllrb.com/docs/home
+
+|제목|내용|설명|
+|------|---|---|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
