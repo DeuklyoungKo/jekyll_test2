@@ -1,0 +1,12 @@
+- name: 드론클래쉬 GAME 소개
+  link: #
+  class: hasSub intro
+- name: 게임소식
+  link: /notice
+  class: hasSub news
+- name: 대회
+  link: /championship
+  class: hasSub match
+- name: 자료실
+  link: #
+  class: hasSub download

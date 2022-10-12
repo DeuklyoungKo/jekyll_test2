@@ -1,0 +1,43 @@
+---
+layout: notice
+class: sub notice
+uiCode1: '게임소식'
+uiCode2: '공지 및 업데이트'
+---
+    <div class="notice-list">
+      <table>
+        <colgroup>
+          <col width="819">
+          <col width="">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>제목</th>
+            <th>등록일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="space"></tr>
+
+          <!-- 리스트 영역 -->
+          {% for notice in site.notices reversed %}
+          <tr>
+            <td><a href="{{ notice.url }}"><span class="{% if notice.isNew == true%}new{% endif %}">{{notice.title}}</span></a></td>
+            <td><span class="date">{{ notice.date | date: "%Y.%m.%d" }}</span></td>
+          </tr>
+          {% endfor %}
+          <!--// 리스트 영역 -->
+
+          <tr class="space"></tr>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <button class="prev">이전</button>
+        <a href="#" class="current">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <button class="next">다음</button>
+      </div>
+    </div>

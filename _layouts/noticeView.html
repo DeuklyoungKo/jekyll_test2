@@ -1,0 +1,15 @@
+---
+layout: notice
+---
+<div class="notice-view">
+  <div class="title">
+    <p>{{page.title}}</p>
+    <span class="date">등록일 {{ page.date | date: "%Y.%m.%d" }}</span>
+  </div>
+  <div class="viewCont">
+    {{content}}
+  </div>
+  <div class="btnWrap">
+    <a href="{{ site.baseurl}}/notice"><img src="{{ site.baseurl}}/assets/img/sub/btn_list.png" alt="리스트 보기"></a>
+  </div>
+</div>

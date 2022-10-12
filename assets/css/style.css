@@ -1,0 +1,972 @@
+@charset "UTF-8";
+@import url("./reset.css");
+@font-face {
+	font-family: "Noto";
+	font-style: normal;
+	font-weight: 400;
+	src: local(NotoSansKR-Regular), url("../fonts/NanumSquareR.eot"), url("../fonts/NotoSansKR-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Regular.woff") format("woff"), url("../fonts/NotoSansKR-Regular.otf") format("opentype");
+}
+@font-face {
+	font-family: "Noto";
+	font-style: bold;
+	font-weight: 700;
+	src: local(NotoSansKR-Bold), url("../fonts/NotoSansKR-Bold.eot"), url("../fonts/NotoSansKR-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Bold.woff") format("woff"), url("../fonts/NotoSansKR-Bold.otf") format("opentype");
+}
+@font-face {
+	font-family: "NanumSquare";
+	font-weight: 400;
+	src: url("../fonts/NanumSquareR.eot");
+	src: local(NanumSquareR), url("../fonts/NanumSquareR.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumSquareR.woff") format("woff"), url("../fonts/NanumSquareR.ttf") format("truetype");
+}
+@font-face {
+	font-family: "NanumSquare";
+	font-weight: 700;
+	src: url("../fonts/NanumSquareB.eot");
+	src: local(NanumSquareB), url("../fonts/NanumSquareB.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumSquareB.woff") format("woff"), url("../fonts/NanumSquareB.ttf") format("truetype");
+}
+body {
+	font-family: "NanumSquare", "Noto";
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	position: relative;
+}
+body .hidden {
+	overflow: hidden;
+	border: 0;
+	position: absolute;
+	z-index: -1;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	        clip-path: inset(50%);
+}
+body .i-hidden {
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	z-index: -1;
+	border: 0;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	        clip-path: inset(50%);
+}
+body .flex-v {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+body img {
+	display: block;
+}
+body header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+body header h1 {
+	border-top: 13px solid #020911;
+}
+body header h1 .logo {
+	display: block;
+	width: 211px;
+	height: 143px;
+	background: url("../img/common/logo.png") no-repeat;
+	position: absolute;
+	left: 18px;
+	top: 0;
+	font-size: 1px;
+	letter-spacing: -9999px;
+	text-indent: -99999px;
+	z-index: 1000;
+}
+body header nav {
+	width: 100%;
+}
+body header .gnb .depth1 {
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	height: 70px;
+	background: #080f1d url("../img/common/bg_depth1.png") 1199px 0 no-repeat;
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #080f1d), color-stop(100%, #061e3a)) url("../img/common/bg_depth1.png") 1199px 0 no-repeat;
+	background: linear-gradient(to bottom, #080f1d 0%, #061e3a 100%) url("../img/common/bg_depth1.png") 1199px 0 no-repeat;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#080f1d", endColorstr="#061e3a", GradientType=0 );
+	width: 100%;
+	position: absolute;
+	left: 0;
+	z-index: 10;
+}
+body header .gnb .depth1:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #173b53;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+body header .gnb .depth1:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #173b53;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+}
+body header .gnb .depth1 .menu {
+	margin-left: 239px;
+	display: flex;
+}
+body header .gnb .depth1 .menu li {
+	border-left: 2px solid #173b53;
+	display: flex;
+}
+body header .gnb .depth1 .menu li:last-child {
+	border-right: 2px solid #173b53;
+}
+body header .gnb .depth1 .menu li a {
+	color: #9aebff;
+	font-weight: 700;
+	text-decoration: none;
+	display: flex;
+	padding: 0 30px;
+	width: 149px;
+	height: 68px;
+	box-sizing: border-box;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+	position: relative;
+	font-size: 18px;
+	line-height: 24px;
+	z-index: 1;
+}
+body header .gnb .depth1 .menu li a:hover {
+	color: #fff;
+	position: relative;
+}
+body header .gnb .depth1 .menu li a:hover:after {
+	content: "";
+	background: url("../img/common/effect_d1_over.png") no-repeat 50% 100%;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	display: block;
+	width: 149px;
+	height: 68px;
+	z-index: -1;
+}
+body header .gnb .depth1 .menu li.on a, body header .gnb .depth1 .menu li.current a {
+	color: #fff;
+	position: relative;
+}
+body header .gnb .depth1 .menu li.on a:after, body header .gnb .depth1 .menu li.current a:after {
+	content: "";
+	background: url("../img/common/effect_d1_over.png") no-repeat 50% 100%;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	display: block;
+	width: 149px;
+	height: 68px;
+	z-index: -1;
+}
+body header .gnb .depth2 {
+	width: 100%;
+	height: 0;
+	transition: all 0.25s ease;
+	position: absolute;
+	left: 0;
+	top: 70px;
+	background-color: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	z-index: 9;
+}
+body header .gnb .depth2:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: rgba(23, 59, 83, 0.55);
+	position: absolute;
+	bottom: 2px;
+	left: 0;
+}
+body header .gnb .depth2:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+body header .gnb .depth2.on {
+	height: 57px;
+	background-color: rgba(0, 0, 0, 0.7);
+	top: 85px;
+	opacity: 1;
+}
+body header .gnb .depth2.on a {
+	height: 52px;
+	opacity: 1;
+	transition: all 0.2s ease-in-out;
+}
+body header .gnb .depth2 ul {
+	display: flex;
+	position: absolute;
+	top: 0;
+}
+body header .gnb .depth2 ul li {
+	display: flex;
+}
+body header .gnb .depth2 ul li.current a {
+	color: #fff;
+	opacity: 1;
+}
+body header .gnb .depth2 ul li.current a:after {
+	content: "";
+	display: block;
+	background: url("../img/common/effect_d2_over.png") no-repeat 50% 100%;
+	position: absolute;
+	bottom: -2px;
+	left: calc(50% - 40px);
+	display: block;
+	width: 80px;
+	height: 19px;
+	z-index: 10;
+}
+body header .gnb .depth2 ul li a {
+	color: #409fc8;
+	font-weight: 700;
+	font-size: 15px;
+	padding: 0 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	position: relative;
+	opacity: 0;
+}
+body header .gnb .depth2 ul li a:hover {
+	color: #fff;
+	opacity: 1;
+}
+body header .gnb .depth2 ul li a:hover:after {
+	content: "";
+	display: block;
+	background: url("../img/common/effect_d2_over.png") no-repeat 50% 100%;
+	position: absolute;
+	bottom: -2px;
+	left: calc(50% - 40px);
+	display: block;
+	width: 80px;
+	height: 19px;
+	z-index: 10;
+}
+body header .gnb .depth2 ul li + li a:before {
+	content: "";
+	background-color: #274657;
+	width: 2px;
+	height: 15px;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 7.5px);
+	display: block;
+}
+body header .gnb .depth2.intro ul {
+	left: 239px;
+}
+body header .gnb .depth2.news ul {
+	left: 400px;
+}
+body header .gnb .depth2.match ul {
+	left: 545px;
+}
+body header .gnb .depth2.download ul {
+	left: 735px;
+}
+body header .gnb .session {
+	position: absolute;
+	right: 0;
+	top: 16px;
+	z-index: 10;
+	display: flex;
+}
+body header .gnb .session li {
+	border-left: 2px solid #173b53;
+	position: relative;
+}
+body header .gnb .session li a {
+	font-size: 11px;
+	text-decoration: none;
+	color: #6f9fbf;
+	display: flex;
+	height: 68px;
+	width: 70px;
+	justify-content: center;
+	padding-top: 40px;
+	box-sizing: border-box;
+}
+body header .gnb .session li:before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	display: block;
+	background: url("../img/common/icon_session.png") no-repeat;
+	position: absolute;
+	top: 16px;
+	left: calc(50% - 10px);
+	z-index: -1;
+}
+body header .gnb .session li.login:before {
+	background-position: -20px 0;
+}
+body header .gnb .session li.mypage:before {
+	background-position: -40px 0;
+}
+body header .gnb .session li.logout:before {
+	background-position: -60px 0;
+}
+body.main #wrapper {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+body.main #wrapper .gameStart {
+	position: absolute;
+	right: 25px;
+	top: 146px;
+	z-index: 1000;
+	opacity: 0.8;
+	transition: all 0.2s ease-in-out;
+}
+body.main #wrapper .gameStart:hover {
+	opacity: 1;
+}
+body.main #wrapper .myInfo {
+	position: absolute;
+	right: 0;
+	top: 85px;
+	width: 307px;
+	height: 855px;
+	box-sizing: border-box;
+	z-index: 8;
+	background: url("../img/main/bg_myInfo.png") no-repeat;
+	height: 787px;
+	box-shadow: 2px 4px 81px rgba(0, 0, 0, 0.8);
+	display: none;
+	padding-top: 275px;
+}
+body.main #wrapper .myInfo.on {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+body.main #wrapper .myInfo.on .usrPhoto {
+	width: 112px;
+	height: 112px;
+	border-radius: 8px;
+	overflow: hidden;
+	background: url("../img/main/bg_usrPhoto.jpg") 50% 50% no-repeat;
+	margin-bottom: 34px;
+}
+body.main #wrapper .myInfo.on .usrPhoto img {
+	-o-object-fit: cover;
+	   object-fit: cover;
+	width: 112px;
+	height: 112px;
+}
+body.main #wrapper .myInfo.on p {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 30px;
+}
+body.main #wrapper .myInfo.on p:first-of-type {
+	margin-bottom: 49px;
+}
+body.main #wrapper .myInfo.on p span {
+	color: #9aebff;
+	font-size: 16px;
+	margin-bottom: 13px;
+	text-shadow: 0 0 13px #0769d1;
+}
+body.main #wrapper .myInfo.on p strong {
+	background: -webkit-linear-gradient(#fff, #99e0f2);
+	-webkit-background-clip: text;
+	        background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 22px;
+	text-shadow: 0 0 13px #0769d1;
+	text-align: center;
+	line-height: 1.3;
+}
+body.main #wrapper .mainSlides {
+	padding-top: 87px;
+	margin-bottom: 0 !important;
+}
+body.main #wrapper .mainSlides .banner1 {
+	height: 784px;
+}
+body.main #wrapper .mainSlides .slick-dots {
+	bottom: 30px;
+}
+body.main #wrapper .mainSlides .slick-dots li button {
+	width: 14px;
+	height: 14px;
+	background-color: #071332;
+	border: 2px solid #84b1c3;
+	transform: rotate(-45deg);
+}
+body.main #wrapper .mainSlides .slick-dots li button:before {
+	opacity: 0;
+}
+body.main #wrapper .mainSlides .slick-dots li.slick-active button {
+	background-color: #a3fbff;
+	border-color: #a3fbff;
+	box-shadow: 0 0 5px rgba(24, 102, 222, 0.92), 0 0 2px rgba(43, 122, 187, 0.88), 1px 1px 1px rgba(9, 36, 74, 0.22);
+}
+body.sub #wrapper {
+	padding-top: 87px;
+}
+body.sub #wrapper .visual {
+	height: 261px;
+	position: relative;
+	z-index: 2;
+}
+body.sub #wrapper .visual h1 {
+	font-size: 1px;
+	letter-spacing: -9999px;
+	text-indent: -99999px;
+}
+body.sub #wrapper .subWrap {
+	background: url("../img/sub/bg_subWrap.jpg") 50% 0 no-repeat #061d39;
+	margin-top: -38px;
+	z-index: 1;
+	padding-top: 102px;
+	box-sizing: border-box;
+}
+body.sub.intro.about .visual {
+	background: url("../img/sub/bg_about.png") 50% 0 no-repeat;
+}
+body.sub.intro.about .subWrap {
+	background: url("../img/sub/bg_subWrap_about.jpg") 50% 0 no-repeat !important;
+	margin-top: -38px;
+	z-index: 1;
+	padding: 0 !important;
+	box-sizing: border-box;
+	height: 4900px;
+}
+body.sub.intro.guide .visual {
+	background: url("../img/sub/bg_guide.png") 50% 0 no-repeat;
+}
+body.sub.intro.guide .innerCont {
+	width: 1000px !important;
+	padding-bottom: 200px;
+}
+body.sub.notice .visual {
+	background: url("../img/sub/bg_notice.png") 50% 0 no-repeat;
+}
+body.sub.notice .notice-list {
+	width: 1000px;
+	margin: 0 auto;
+}
+body.sub.notice .notice-list table {
+	border-top: 2px solid #1f5da5;
+	width: 100%;
+	border-bottom: 1px solid #1f5da5;
+}
+body.sub.notice .notice-list table thead th {
+	height: 36px;
+	border-bottom: 1px solid #1f5da5;
+	vertical-align: middle;
+	color: #39a2e3;
+	font-size: 15px;
+	font-weight: 700 !important;
+}
+body.sub.notice .notice-list table tbody tr:nth-of-type(odd) td {
+	background-color: #062041;
+}
+body.sub.notice .notice-list table tbody tr:nth-of-type(even) td {
+	background-color: #123763;
+}
+body.sub.notice .notice-list table tbody tr.space {
+	height: 20px;
+}
+body.sub.notice .notice-list table tbody td {
+	height: 60px;
+	vertical-align: middle;
+	color: #fff;
+	text-align: center;
+}
+body.sub.notice .notice-list table tbody td a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	padding-left: 80px;
+	width: 800px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	/* 라인수 */
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+	line-height: 1em;
+	height: 1em;
+	/* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+	box-sizing: border-box;
+	text-align: left;
+	position: relative;
+}
+body.sub.notice .notice-list table tbody td span {
+	position: relative;
+}
+body.sub.notice .notice-list table tbody td span.new:after {
+	content: "";
+	display: block;
+	width: 25px;
+	height: 12px;
+	background: url("../img/sub/icon_new.gif") no-repeat;
+	position: absolute;
+	left: -35px;
+	top: 5px;
+}
+body.sub.notice .notice-list table tbody td span.date {
+	font-size: 13px;
+	color: #39a2e3;
+}
+body.sub.notice .notice-list .pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 0;
+}
+body.sub.notice .notice-list .pagination button {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	background-color: #fff;
+	border-radius: 0;
+	font-size: 1px;
+	letter-spacing: -9999px;
+	text-indent: -99999px;
+	border: 0;
+	background-color: transparent;
+	width: 49px;
+	height: 43px;
+	cursor: pointer;
+}
+body.sub.notice .notice-list .pagination button.prev {
+	background: url("../img/sub/page_prev.png") no-repeat;
+	margin-right: 25px;
+}
+body.sub.notice .notice-list .pagination button.next {
+	background: url("../img/sub/page_next.png") no-repeat;
+	margin-left: 25px;
+}
+body.sub.notice .notice-list .pagination a {
+	font-size: 22px;
+	color: #39a2e3;
+	width: 27px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+body.sub.notice .notice-list .pagination a.current, body.sub.notice .notice-list .pagination a:hover {
+	color: #fff;
+}
+body.sub.notice .notice-view {
+	width: 1000px;
+	margin: 0 auto;
+}
+body.sub.notice .notice-view .title {
+	border-top: 2px solid #1f5da5;
+	border-bottom: 1px solid #1f5da5;
+	padding: 30px;
+	text-align: center;
+}
+body.sub.notice .notice-view .title p {
+	color: #fff;
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 25px;
+	line-height: 1.2;
+	word-break: keep-all;
+}
+body.sub.notice .notice-view .title span {
+	color: #39a2e3;
+	font-size: 14px;
+}
+body.sub.notice .notice-view .viewCont {
+	padding: 38px 54px 50px;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 400;
+	border-bottom: 1px solid #1f5da5;
+}
+body.sub.notice .notice-view .viewCont img {
+	max-width: 892px;
+}
+body.sub.notice .notice-view .btnWrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 0 100px;
+}
+body.sub.match .visual {
+	background: url("../img/sub/bg_match.png") 50% 0 no-repeat;
+}
+body.sub.match .innerCont {
+	width: 1000px !important;
+	margin: 0 auto;
+	padding-bottom: 300px;
+}
+body.sub.match .innerCont img {
+	margin: 0 auto;
+}
+body.sub.download .visual {
+	background: url("../img/sub/bg_download.png") 50% 0 no-repeat;
+}
+body.sub.download .innerCont {
+	width: 1000px !important;
+	margin: 0 auto;
+	padding-bottom: 300px;
+}
+body.sub.download .innerCont .downForm {
+	position: relative;
+	height: 151px;
+	background: url("../img/sub/bg_downBtn.png") no-repeat;
+}
+body.sub.download .innerCont .downForm a {
+	position: absolute;
+	top: calc(50% - 29.5px);
+	right: 52px;
+	display: block;
+	width: 223px;
+	height: 59px;
+}
+body.sub.member.join .visual {
+	background: url("../img/sub/bg_memberJoin.png") 50% 0 no-repeat;
+}
+body.sub.member.modify .visual {
+	background: url("../img/sub/bg_memberModify.png") 50% 0 no-repeat;
+}
+body.sub.member.modify input[type=password] {
+	width: 290px;
+}
+body.sub.member.reset .visual {
+	background: url("../img/sub/bg_reset.png") 50% 0 no-repeat;
+}
+body.sub.member.login .visual {
+	background: url("../img/sub/bg_login.png") 50% 0 no-repeat;
+}
+body.sub.member .joinForm {
+	width: 818px;
+	margin: 0 auto;
+}
+body.sub.member .joinForm > p {
+	text-align: center;
+	font-size: 26px;
+	color: #52b7f5;
+	line-height: 1.5;
+	font-weight: 700;
+	margin-bottom: 40px;
+}
+body.sub.member .joinForm section {
+	border-bottom: 1px solid #0c3a6f;
+	display: block;
+	padding: 40px 0;
+}
+body.sub.member .joinForm section:first-of-type {
+	padding-top: 0;
+}
+body.sub.member .joinForm section:last-of-type {
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+body.sub.member .joinForm section > .essential {
+	display: block;
+	text-align: right;
+	color: #ff0943;
+	font-size: 12px;
+	padding-right: 116px;
+	margin-bottom: 10px;
+}
+body.sub.member .joinForm section > fieldset {
+	display: flex;
+	align-items: center;
+}
+body.sub.member .joinForm section > fieldset > label, body.sub.member .joinForm section > fieldset .label {
+	width: 160px;
+	padding-left: 90px;
+	font-size: 18px;
+	color: #39a2e3;
+	position: relative;
+}
+body.sub.member .joinForm section > fieldset > label.essential:after, body.sub.member .joinForm section > fieldset .label.essential:after {
+	content: "*";
+	color: #ff0943;
+	font-size: 14px;
+	position: absolute;
+	top: -2px;
+	margin-left: 2px;
+}
+body.sub.member .joinForm section > fieldset > label + input, body.sub.member .joinForm section > fieldset .label + input {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	background-color: #fff;
+	border-radius: 0;
+	border: 2px solid #043264;
+	width: 450px;
+	background-color: #052042;
+	height: 54px;
+	color: #fff;
+	font-size: 20px;
+	font-family: "NanumSquare";
+	padding: 10px;
+	box-sizing: border-box;
+}
+body.sub.member .joinForm section > fieldset > label + input::-moz-placeholder, body.sub.member .joinForm section > fieldset .label + input::-moz-placeholder {
+	color: #104a8d;
+	font-size: 20px;
+}
+body.sub.member .joinForm section > fieldset > label + input:-ms-input-placeholder, body.sub.member .joinForm section > fieldset .label + input:-ms-input-placeholder {
+	color: #104a8d;
+	font-size: 20px;
+}
+body.sub.member .joinForm section > fieldset > label + input::placeholder, body.sub.member .joinForm section > fieldset .label + input::placeholder {
+	color: #104a8d;
+	font-size: 20px;
+}
+body.sub.member .joinForm section > fieldset input[type=password] {
+	font-family: "Noto";
+}
+body.sub.member .joinForm section > fieldset span.email, body.sub.member .joinForm section > fieldset span.name {
+	font-size: 24px;
+	font-weight: 700;
+	color: #fff;
+	display: block;
+	width: 450px;
+	word-break: break-all;
+}
+body.sub.member .joinForm section > fieldset select {
+	border: 2px solid #043264;
+	background-color: #052042;
+	height: 54px;
+	color: #fff;
+	font-size: 20px;
+	font-family: "NanumSquare";
+	padding: 10px;
+	box-sizing: border-box;
+	width: 85px;
+}
+body.sub.member .joinForm section > fieldset .hyphen {
+	color: #104a8d;
+	margin: 0 12px;
+	display: block;
+	font-size: 14px;
+}
+body.sub.member .joinForm section > fieldset input[name=usrPhone] {
+	border: 2px solid #043264;
+	background-color: #052042;
+	height: 54px;
+	color: #fff;
+	font-size: 20px;
+	font-family: "NanumSquare";
+	padding: 10px;
+	box-sizing: border-box;
+	width: 153px;
+	text-align: center;
+}
+body.sub.member .joinForm section > fieldset:nth-of-type(even) {
+	margin: 24px 0;
+}
+body.sub.member .joinForm section > fieldset:last-of-type {
+	margin-bottom: 0;
+}
+body.sub.member .joinForm section > fieldset + div {
+	padding-left: 250px;
+	display: flex;
+	align-items: center;
+	margin-top: 22px;
+}
+body.sub.member .joinForm section > fieldset + div input {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	background-color: #fff;
+	border-radius: 0;
+	border: 2px solid #043264;
+	width: 23px;
+	height: 23px;
+	position: relative;
+	background-color: #052042;
+}
+body.sub.member .joinForm section > fieldset + div input:checked:before {
+	content: "";
+	width: 12px;
+	height: 7px;
+	border-left: 3px solid #ff0943;
+	border-bottom: 3px solid #ff0943;
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0;
+	left: 2px;
+}
+body.sub.member .joinForm section > fieldset + div label {
+	color: #39a2e3;
+	font-size: 16px;
+	margin-left: 10px;
+	display: block;
+	cursor: pointer;
+}
+body.sub.member .joinForm section > fieldset + span {
+	color: #369cda;
+	font-size: 13px;
+	padding: 12px 0 50px 250px;
+	display: block;
+}
+body.sub.member .joinForm section > fieldset + span.ageTxt {
+	font-size: 14px;
+	color: #16ce95;
+	padding: 12px 0 0 250px;
+}
+body.sub.member .joinForm section > fieldset .uploadForm {
+	display: flex;
+	flex-direction: column;
+}
+body.sub.member .joinForm section > fieldset .uploadForm .input-file {
+	display: flex;
+}
+body.sub.member .joinForm section > fieldset .uploadForm .input-file [type=file] {
+	overflow: hidden;
+	border: 0;
+	position: absolute;
+	z-index: -1;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	        clip-path: inset(50%);
+}
+body.sub.member .joinForm section > fieldset .uploadForm .input-file .file-label {
+	display: inline-block;
+	width: 79px;
+	height: 54px;
+	line-height: 54px;
+	padding: 0 10px;
+	font-size: 15px;
+	background-color: #104a8d;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+body.sub.member .joinForm section > fieldset .uploadForm .input-file .file-name {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	background-color: #fff;
+	border-radius: 0;
+	border: 2px solid #104a8d;
+	width: 210px;
+	background-color: #052042;
+	height: 54px;
+	color: #fff;
+	font-size: 20px;
+	font-family: "NanumSquare";
+	padding: 10px;
+	box-sizing: border-box;
+}
+body.sub.member .joinForm section > fieldset .uploadForm .input-file + span {
+	color: #369cda;
+	font-size: 13px;
+	display: block;
+	padding-top: 14px;
+}
+body.sub.member .joinForm section > fieldset .photoBox {
+	width: 123px;
+	height: 123px;
+	background: url("../img/sub/bg_uploadPhoto.jpg") no-repeat;
+	margin-left: 18px;
+	margin-top: -40px;
+}
+body.sub.member .joinForm section > fieldset .photoBox img {
+	width: 123px;
+	-o-object-fit: contain;
+	   object-fit: contain;
+}
+body.sub.member .joinForm section .btnReset {
+	background-color: #3495d2;
+	width: 130px;
+	height: 35px;
+	border: 1px solid #146497;
+	border-radius: 6px;
+	color: #061d39;
+	font-weight: 700;
+	line-height: 35px;
+	text-decoration: none;
+	font-size: 13px;
+	text-align: center;
+	margin-left: 20px;
+}
+body.sub.member .joinForm .btnWrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 70px 0 100px;
+}
+body #wrapper .innerCont {
+	width: 1200px;
+	margin: 0 auto;
+}
+body #wrapper footer {
+	background-color: #000000;
+	border-top: 1px solid #353535;
+	padding: 12px 32px;
+	color: #606060;
+	font-size: 12px;
+}
+body #wrapper footer h2 {
+	margin-bottom: 10px;
+}
+body #wrapper footer .flexBox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+body #wrapper footer .flexBox .left {
+	display: flex;
+	flex-direction: column;
+}
+body #wrapper footer .flexBox .companyInfo {
+	display: flex;
+}
+body #wrapper footer .flexBox .companyInfo p {
+	margin-left: 19px;
+}
+body #wrapper footer .flexBox .companyInfo p:first-of-type {
+	margin-left: 0;
+}
+body #wrapper footer .flexBox .companyInfo p span {
+	font-weight: 700;
+}
+body #wrapper footer .flexBox .copyright {
+	font-size: 13px;
+}

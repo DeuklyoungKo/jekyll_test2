@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+  <link rel="stylesheet" href="{{ site.baseurl}}/assets/css/slick.css">
+  <link rel="stylesheet" href="{{ site.baseurl}}/assets/css/slick-theme.css">
+  <link rel="stylesheet" href="{{ site.baseurl}}/assets/css/style.css">
+  <title>드론클래시 GAME</title>
+  <script src="{{ site.baseurl}}/assets/js/jquery-3.5.0.js"></script>
+  <script src="{{ site.baseurl}}/assets/js/slick.min.js"></script>
+ 
+</head>
+<body class="{{page.class}}">
+
+  {% include navigation.html %}
+
+  <div id="wrapper">
+    {{content}}
+
+    
+    {% include footer.html %}
+
+
+  </div>
+   <script src="{{ site.baseurl}}/assets/js/interface.js"></script>
+  <script>
+		$(document).ready(function(){
+			UI.init('{{page.uiCode1}}','{{page.uiCode2}}');
+		})
+	</script>
+</body>
+</html>
